@@ -4,6 +4,7 @@
   "homepage": "https://github.com/voyagersearch/leaflet-solr-heatmap",
   "description": "Solr Heatmap for Leaflet",
   "license": "Apache-2.0",
+  "main": "heatmap.js",
   "ignore": [
     "**/.*",
     "node_modules",
