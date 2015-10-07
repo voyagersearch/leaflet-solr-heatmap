@@ -1,0 +1,16 @@
+{
+  "name": "leaflet-solr-heatmap",
+  "version": "0.1.0",
+  "homepage": "https://github.com/voyagersearch/leaflet-solr-heatmap",
+  "description": "Solr Heatmap for Leaflet",
+  "license": "Apache-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "leaflet": "~0.7.5"
+  }
+}

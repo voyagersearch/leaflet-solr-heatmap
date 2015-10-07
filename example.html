@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Solr Heatmap</title>
+
+    <link href="bower_components/leaflet/dist/leaflet.css" rel="stylesheet">
+    <style>
+    html, body {
+      height: 100%;
+    }
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="map">
+    </div>
+
+    <!--
+    Leaflet is the only pre-requisite library.
+    -->
+    <script src="bower_components/leaflet/dist/leaflet.js"></script>
+
+    <!--
+    If running from straight sources the canvas layer must be included
+    -->
+    <script src="canvas_layer/leaflet_canvas_layer.js"></script>
+    <script src="heatmap.js"></script>
+
+    <!--
+    If running from production build heatmap.js has canvas layer included
+    <script src="dist/heatmap.js"></script>
+    -->
+    <script>
+
+    var map = L.map("map").setView([37.16, -115.07], 5);
+
+    L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+      maxZoom: 19
+    }).addTo(map);
+
+    new L.SolrHeatmapLayer('http://voyagerdemo.com/daily/solr/v0', {
+       field: 'geohash',
+       colors: ['ffff00', 'ff0000']
+    }).addTo(map);
+
+    </script>
+  </body>
+</html>

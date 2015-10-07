@@ -1,0 +1,20 @@
+{
+  "name": "leaflet-solr-heatmap",
+  "version": "0.1.0",
+  "description": "Solr Heatmap for Leaflet",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/voyagersearch/leaflet-solr-heatmap.git"
+  },
+  "license": "Apache 2.0",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.4.0"
+  },
+  "scripts": {
+    "postinstall": "bower install"
+  }
+}
