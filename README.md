@@ -31,7 +31,7 @@ See the [example](example.html) for a working example.
 | query | ``{q: '*:*'}`` | Object defining Solr query (q, fq, etc...). |
 | colors | ``['ffff00', 'ff0000']`` | Two colors for the low and high intensity areas of the heatmap respectively.  Specified as 6 digit hex values. |
 | blur | ``5`` | The radius in pixels of the blur filter to apply during heatmap rendering. |
-| opacity | 0.75 | The opacity of the heatmap layer. |
+| opacity | ``0.5`` | The opacity of the heatmap layer. |
 
 ## Solr Heatmaps
 
