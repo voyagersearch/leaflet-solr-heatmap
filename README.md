@@ -21,7 +21,7 @@ And finally add it to the map.
         field: 'geo'
     }).addTo(map);
 
-See the [example](example.html) for a working example.
+See the a working [example](example.html).
 
 ## Configuration
 
