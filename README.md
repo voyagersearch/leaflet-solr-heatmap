@@ -39,3 +39,10 @@ See the [example](example.html) for a working example.
 ## Solr Heatmaps
 
 Heatmap Faceting is documented in the Solr spatial [docs](https://cwiki.apache.org/confluence/display/solr/Spatial+Search).
+
+## Background
+
+The heatmap layer works by rendering the heatmap data directly using the browser 
+[canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) api. This is a much more efficient approach than 
+creating objects and adding them to a leaflet vector layer. The canvas layer infrastructure is provided by a 
+[plugin](https://github.com/CartoDB/Leaflet.CanvasLayer) from CartoDB. 
