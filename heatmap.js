@@ -13,7 +13,7 @@ if(typeof(L) !== 'undefined' && typeof(L.CanvasLayer) != 'undefined') {
   function interpolate(min, max, method) {
     var delta = max - min;
     var fx;
-    if (method === 'linear') {
+    if (method === 'linear' || method == 'lin') {
       fx = function(x) {
         return delta*x;
       };
@@ -244,7 +244,8 @@ if(typeof(L) !== 'undefined' && typeof(L.CanvasLayer) != 'undefined') {
       query: {q: '*:*'},
       blur: 10,
       opacity: 0.5,
-      colors: ['00ff00', 'ff0000']
+      colors: ['00ff00', 'ff0000'],
+      interp: 'linear'
     },
 
     initialize: function(url, options) {
@@ -370,7 +371,7 @@ if(typeof(L) !== 'undefined' && typeof(L.CanvasLayer) != 'undefined') {
           self.computeStats(hm);
 
           // get the interpolation function
-          var interp = interpolate(0, 1, 'linear');
+          var interp = interpolate(0, 1, self.options.interp);
 
           // width/height of each grid cell in lng/lat
           var dx = (hm.maxX - hm.minX) / hm.columns;

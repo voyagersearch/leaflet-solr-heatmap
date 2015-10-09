@@ -32,6 +32,7 @@ See the [example](example.html) for a working example.
 | colors | ``['ffff00', 'ff0000']`` | Two colors for the low and high intensity areas of the heatmap respectively.  Specified as 6 digit hex values. |
 | blur | ``5`` | The radius in pixels of the blur filter to apply during heatmap rendering. |
 | opacity | ``0.5`` | The opacity of the heatmap layer. |
+| interp | ``lin`` | Interpolation method used to generate colors from intensity values. One of ``lin`` (linear), ``log`` (logarithmic), or ``exp`` (exponential).|
 
 ## Solr Heatmaps
 
