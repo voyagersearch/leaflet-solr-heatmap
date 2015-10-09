@@ -2,6 +2,8 @@
 
 This library contains a [Leaflet](http://leafletjs.com/) layer that renders a Solr heatmap.
 
+![sample](sample.png)
+
 ## Usage
 
 The library can be installed via bower:
